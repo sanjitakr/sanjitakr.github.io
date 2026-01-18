@@ -1,103 +1,124 @@
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, sans-serif;
 }
 
 body {
-  background-color: black;
-  color: azure;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  min-height: 100vh;
-  padding: 4vh 5vw;
-
-  line-height: 1.6;
-  font-weight: 400;
+    background-color: black;
+    color: azure;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    line-height: 1.6;
 }
 
+
 .naming {
-  margin-top: 8vh;
-  padding-bottom: 10vh;
-  max-width: 700px;
+    max-width: 720px;
+    padding: 0 1.2rem;
+    text-align: center;
+    margin-bottom: 8vh;
 }
 
 .naming h4 {
-  font-size: clamp(22px, 6vw, 30px);
-  padding-bottom: 3vh;
-  text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
-
 .naming p {
-  font-size: clamp(14px, 4vw, 15px);
-  text-align: center;
-  color: rgb(200, 200, 200);
+    font-size: 15px;
+    color: rgb(200, 200, 200);
+    text-align: justify;
+    text-align-last: center;
 }
 
-.category {
-  margin-top: 5vh;
-  text-align: center;
+
+.links-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 1.5rem;
+}
+
+.links a {
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.links a:hover {
+    color: rgb(209, 253, 255);
+    transform: translateY(-1px);
+}
+
+
+.container {
+    max-width: 720px;
+    padding: 0 1.2rem;
 }
 
 .category h5 {
-  font-size: 20px;
-  color: rgb(185, 185, 185);
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+    color: rgb(185, 185, 185);
 }
 
-ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style: none;
-  gap: 12px;
-  width: 100%;
-  padding: 0;
-  margin-top: 2vh;
+.category ol {
+    padding-left: 1.2rem;
 }
 
-li {
-  padding-top: 1vh;
-  color: rgb(170, 170, 170);
-  font-size: 14px;
-}
-
-li a {
-  color: white;
-  font-size: 15px;
-  font-family: 'IBM Plex Sans', system-ui, sans-serif;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-a:hover {
-  color: rgb(209, 253, 255);
-}
-
-.container {
-  margin-bottom: 10vh;
-}
-
-.links {
-  font-size: 15px;
-  color: rgb(151, 151, 151);
-}
-
-@media (max-width: 600px) {
-  .naming {
-    margin-top: 4vh;
-    padding-bottom: 6vh;
-  }
-
-  li a {
+.category li {
     font-size: 14px;
-  }
+    color: rgb(170, 170, 170);
+}
 
-  ul {
-    gap: 8px;
-  }
+.category a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.category a:hover {
+    text-decoration: underline;
+}
+
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-name {
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.animate-subtitle {
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+    animation-delay: 0.3s;
+}
+
+
+@media (max-width: 480px) {
+    .naming h4 {
+        font-size: 28px;
+    }
+
+    .naming p {
+        font-size: 14px;
+    }
 }
