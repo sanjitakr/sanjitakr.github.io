@@ -1,0 +1,357 @@
+:root{
+    --color_bg:#1f1f20;
+    --color_bg_alternate_shade:#575757;
+    --color_heading:#ddd5c4;
+    --color_text:#f0f8ff;
+    --color_red: #ffa0a0;
+    --color_neon:#92d100;
+    --color_focus:#292828;
+    --font_size_small:1rem;
+    --font_size_medium:1.2rem;
+    --font_size_large:1.8rem;
+    --font_size_heading:2.5rem;
+    --font_size_hero_title:3.4rem;
+    --font_size_hero_title_focus:3.8rem;
+    --font_heading:'Consolas','Monaco','Lucida Console', monospace;
+    --font_main:'Courier Prime', 'Courier New', Courier, monospace;
+}
+
+
+:root.light_theme{
+    --color_bg:#ddd5c4;
+    --color_bg_alternate_shade:#e4cd9b;
+    --color_text:#292828;
+    --color_heading:#050505;
+    --color_focus:#f0f8ff;
+    --color_neon:#2204a7;
+    --color_red: rgb(170, 36, 36);
+}
+
+#change_theme{
+    background-color: var(--color_bg);
+    color: var(--color_text);
+    border-radius: 4px;
+    transition: 500ms;
+}
+
+
+#change_theme:hover{
+    background-color: var(--color_heading);
+    color:var(--color_bg);
+}
+
+body{
+    background-color:var(--color_bg);
+    color: var(--color_text);
+    font-family: var(--font_main);
+    margin:0;
+    padding: 0;
+}
+
+main{
+    margin-left:2.2rem;
+    margin-right: 3rem;
+}
+
+h1{
+    font-family: var(--font_heading);
+    margin-left: 4rem;
+    color:var(--color_heading);
+}
+
+h2{
+    font-size: var(--font_size_medium);
+}
+
+/*home page animation*/
+
+.home_section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 10vh;
+    min-height: 75vh;
+}
+@keyframes type{
+    from{
+        width:0;
+    }
+    to{
+        width:100%;
+    }
+}
+@keyframes blink{
+    0%,50% {
+        border-color: var(--color_neon);
+    }
+    51% ,100% {
+        border-color: transparent;
+    }
+}
+
+.typing{
+    overflow: hidden;
+    border-right: 2.5px solid transparent;
+    width:0;
+    white-space: nowrap;
+    animation-fill-mode: both;
+}
+
+.greeting{
+    font-size: var(--font_size_large);
+    animation: type 1.5s steps(15) 0.5s forwards, blink 0.5s step-end 3;
+
+}
+.introduction_hero{
+    font-size: var(--font_size_large);
+    color: var(--color_neon);
+    animation: type 1.5s steps(20) 2s forwards, blink 0.5s step-end 3 2s;
+}
+.description_hero{
+    font-size: 0.7rem;
+    animation: type 1.5s steps(25) 3.5s forwards, blink 0.5s step-end 3.5s;
+}
+
+
+/*It ensures that the animation does not play if the setting is enabled displaying clear and readable text*/
+@media (prefers-reduced-motion: reduce){
+    .typing{
+        animation:none;
+        width:100%;
+        white-space: normal;
+        border-right: none;
+    }
+}
+
+a{
+    color: var(--color_heading);
+    text-decoration: none;
+}
+
+
+.nav_horizontal_bar{
+    background-color: var(--color_bg_alternate_shade);
+    display: flex;
+    text-align: center;
+    gap: 1px;
+    width: 100%;
+    flex-direction: column;
+}
+
+
+.nav_item{
+  background-color: var(--color_bg_alternate_shade) ;
+  color: var(--color_heading);
+  padding: 8px;
+  border: var(--color_heading) 1px solid;
+  text-decoration: none;
+  font-family: var(--font_heading);
+}
+
+
+.nav_item_active{
+  background-color: var(--color_heading);
+  color: var(--color_focus);
+  padding: 8px;
+  text-decoration: none;
+  border: var(--color_focus) 1px solid;
+  font-family: var(--font_heading);
+}
+
+@media (min-width: 768px){
+    .nav_horizontal_bar{
+        display: grid;
+        flex-direction: row;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .nav_item_active{
+        grid-column: span 2;
+    }
+
+}
+
+
+button{
+    background-color: var(--color_bg);
+    color: var(--color_heading);
+    font-size: var(--font_size_medium);
+}
+
+/*this is for projects*/
+.filter_button.active{
+    background-color: var(--color_heading);
+    color: var(--color_focus);
+}
+
+.explain{
+    max-height: 0;
+    overflow: hidden;
+    background: var(--color_bg);
+    transition: max-height 0.4s ease-in-out;
+}
+
+.timeline_object{
+    padding: 1rem;
+}   
+
+ul#timeline{
+    padding-left: 0;
+}
+
+.timeline_object.active .explain{
+    max-height: 2000px;
+    display: block;
+}
+
+.timeline_object.active .title{
+    color:var(--color_red)
+}
+
+ul{
+    list-style: none;
+}
+
+.about_page_main{
+    display: flex;
+    gap: 10px;
+    min-height: 50vh;
+    font-size: 1.0rem;
+    flex-direction: column;
+}
+
+.img_col  img {
+   border-radius: 50%;
+   width: 100%;
+}
+
+@media (min-width: 768px){
+    .about_page_main{
+        flex-direction: row;
+        padding-top: 3vh;
+        align-items: flex-start;
+    }
+    .img_col{
+        flex: 0 0 15%;
+    }
+
+    .para_col{
+        flex:1;
+    }
+}
+
+
+.animate_education_timeline{
+    opacity: 0;
+}
+
+.animate_education_timeline.is_visible{
+    animation: fade_in .5s ease forwards;
+}
+
+@keyframes fade_in{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+/*It removes the scroll triggered animation making the text more readible and accessible*/
+@media (prefers-reduced-motion: reduce){
+    .animate_education_timeline.is_visible{
+        animation: none;
+        opacity: 1;
+    }
+}
+
+
+.title{
+    width:100%;
+    cursor: pointer;
+    display: block;
+    padding:10px;
+    text-align: left;
+}
+
+/*all contact specific styles*/
+
+.group{
+    display: block;
+    padding: 1.5rem;
+}
+
+
+.invalid{
+    border: var(--color_red) 1px solid;
+}
+
+.hidden{
+    display: none;
+}
+
+
+
+/*all project specific styles*/
+#project_container{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:20px;
+    padding: 20px;
+
+}
+
+/*I have removed the  bounce efect if this setting is enabled to ensure it is accessible*/
+@media (prefers-reduced-motion: reduce){
+    .submit:hover .submit:focus{
+        translate: none;
+        scale: none;
+    }
+}
+
+
+@media (min-width:768px){
+    #project_container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .project_item.top{
+        grid-column: span 3;
+        align-items: center;
+    }
+    .greeting{
+        font-size:var(--font_size_hero_title);
+    }
+    .introduction_hero{
+        font-size: var(--font_size_hero_title_focus);
+    }
+    .description_hero{
+        font-size: var(--font_size_heading);
+    }
+
+}
+
+.project_item{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.tags_contain{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 80px;
+}
+
+.tag{
+    padding: 3px 8px;
+
+}
+
+.project_links{
+   padding-top:8px;
+   display: inline-block;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+    <head>
+        <title>Sanjita Kumar</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="utf-8">
+         <meta name="viewport"  content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p style="text-align:center;">Sanjita Kumar</p>
+         <nav class="nav_horizontal_bar">
+                <a href="index.html" class="nav_item"> Home</a>
+                <a href="about.html" class="nav_item">About</a>
+                <a href="projects.html" class="nav_item_active">Project</a>
+                <button id="change_theme">Mode</button>
+        </nav>
+        <main>
+            <h1 style="padding-top:3vh;">PROJECT:</h1>
+            <div id="filter">
+                <button class="filter_button" data-tag="All" aria-pressed="true">All</button>
+                <button class="filter_button" data-tag="Python" aria-pressed="false">Python</button>
+                <button class="filter_button" data-tag="C" aria-pressed="false">C</button>
+                <button class="filter_button" data-tag="Web-dev" aria-pressed="false">Web-development</button>
+                <button class="filter_button" data-tag="Scientific" aria-pressed="false">Scientific Computing</button>
+                <button class="filter_button" data-tag="Progress" aria-pressed="false">In Progress </button>
+                <button class="filter_button" data-tag="Complete" aria-pressed="false">Completed</button>
+
+            </div>
+            <div class="projects" id="project_container" aria-live="polite"></div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
