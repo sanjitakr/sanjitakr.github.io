@@ -1,89 +1,130 @@
 <!DOCTYPE html>
-
-
 <html lang="en">
-    <head>
-        <title>Sanjita Kumar</title>
-        <meta charset="utf-8">
-         <meta name="viewport"  content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About · Sanjita Kumar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-        <p style="text-align:center;">Sanjita Kumar</p>
-         <nav class="nav_horizontal_bar">
-                <a href="index.html" class="nav_item"> Home</a>
-                <a href="about.html" class="nav_item_active">About</a>
-                <a href="projects.html" class="nav_item">Project</a> 
-                <button id="change_theme">Mode</button>
-        </nav>
+<nav>
+  <span class="nav-path">~/sanjita/about</span>
+  <div class="nav-tabs">
+    <a href="index.html"    class="nav-tab">home</a>
+    <a href="about.html"    class="nav-tab active">about</a>
+    <a href="projects.html" class="nav-tab">projects</a>
+    <a href="links.html"    class="nav-tab">links</a>
+    <button id="theme-btn" aria-label="Switch to light mode">
+      <span class="theme-icon" aria-hidden="true"></span>
+    </button>
+  </div>
+</nav>
 
-        <main>
-        <h1 style="padding-top: 3vh;"> ABOUT ME: </h1>
-        <section class="about_page_main">
-            <div class="para_col">
-                <p>Hi! My name is Sanjita Kumar. I am currently an undergraduate student at IIIT Hyderabad. My branch is BTech Computer Science with a MS in Computational Natural Sciences. I am passionate about problem solving and exploring new topics, areas and softwares. My current interests include learning about quantum computing, scientific-computing, and learning more mathematics. I like solving maths, physics and puzzles and am currently interested in learning how to model these problems on a computer.
-                </p><p>I am currently in ISAQC and Chess Club. I love reading books, listening to podcasts, watching popular science and math videos including Numberphile, 3blue1brown.
-                </p>
-                <h2>
-                    Current Interests- 
-                </h2>
-                <ul>
-                    <li>Mathematics</li>
-                    <li>Podcasts</li>
-                    <li>Running and watching sports</li>
-                    <li>Chess</li>
-                    <li>Quantum Computing</li>
-                    <li>Puzzles</li>
-                </ul>
-                <h2>
-                    Skills- 
-                </h2>
-                <ul>
-                    <li>Video editing on DaVinci Resolve</li>
-                    <li>C</li>
-                    <li>C++</li>
-                    <li>Python</li>
-                    <li>Numpy, Matplotlib and Pandas</li>
-                    <li>Blender, and audio editing on Waveform and Cakewalk by Bandlab</li>
-                    <li>HTML,CSS  and JS</li>
-                </ul>
-            </div>
-            <div  class="img_col"> 
-                <img src="images/pfp.jpg" alt="Profile Photo">
-            </div>
-        </section>
-        <section class="animate_education_timeline">
-            <h2>Timeline-</h2>
-            <ul id="timeline" class="timeline_box">
-                <li class="timeline_object">
-                    <button class="title" aria-expanded="false"> >> EARLY EDUCATION </button>
-                    <div class="explain">
-                        <p>I am from Mumbai and did my initial schooling and 11th and 12 th grade in Mumbai. I moved around a lot throughout my schooling. I got 96.6% in 10th grade and 97.4% in 12th grade.Apart from school I have explored many different activites like playing table tennis and basketball in school, participating in different contests such as GSL(Global Social Leaders) where our team had worked on a site to promote Good health and Well being and run activites in the pandemic for it. I have also participated in different school events such as MUN, hackathons, and annual days.</p>
-                        <p>I was introduced to web development and python in the 7th grade.I had also participated in an enterpreneurship contest where my teams idea was a website that had games and content that promoted SDG goals. I had learned web development during the week where I had built the site on my own using tutorials, stackoverflow and blogs on the internet. I ended up being able to make a matching-cards game and a login system using pHp for the site.</p>
-                        <p> During the pandemic I had also watched a lot of MIT OCW lectures and towards the end of 10th and start of 11th grade I found out about competitive programming.Due to JEE preparation and school work I was not able prepare for the olympiad but I did solve a lot of problems from websites like CSES and ZCO and ZIO previous year problems on codechef. Solving these problems felt like solving fun puzzles especially the ZIO problems which can be done using pen and paper. This also introduced me to concepts like time complexity and algorithms. I also found out about math olympiads and subjects like combinatorics which I had never explored before. I gave IOQM in 12th for the first time and got a national certificate for coming in the top 10% of participants.After the college admission process has got over I started exploring these subjects again in college. Along with school, I spent 11th and 12th grade preparing for JEE mains and advanced. I also wrote UGEE, IAT and MHTCET</p>
-                    </div>
-                </li>
-                <li class="timeline_object">
-                    <button class="title" aria-expanded="false"> >> MEDIA SOFTWARES </button>
-                    <div class="explain">
-                        <p>I was very interested in editing and VFX in 8th-9th grade and have learnt Blender, Da Vinci Resolve, spent some time on GIMP and tried to make small animations, 3D art and edit videos especially for my school events and competitions. I have also spent some time on Cakewalk by Bandlab and similar softwares learning about music production, VST plugins and what goes into the process. While I am not proficient at these software I really enjoyed it as it introduced me to online communities of people trying to learn new things. It coincided with me learning programming and fuelled my interest in computers and how they can be applied to such a diverse range of interests.</p>
-                    </div>
-                </li>
-                <li class="timeline_object">
-                    <button class="title" aria-expanded="false"> >> UNDERGRADUATE</button>
-                    <div class="explain">
-                        <p>First year of college: I have participated in a 2 hackathons Build2Break and Megathon, did an ML Workshop at IIT Bombay in the winter break, and did a course on Numpy, Matplotlib and Pandas in the winter break. I also worked on a couple of projects including a Random walk package, Unix Shell, this personal site , the chess tracker, multiplayer arena based tic tac toe game with facial recognition and a couple of other projects and courses.</p>
-                    </div>
-                </li>
-            </ul>
-        </section>
-        <div>
-            <h2>Contact-</h2>
-            <p><a href="https://www.linkedin.com/in/sanjitakumar/"> Linkedin</a></p>
-            <p><a href="https://github.com/sanjitakr">Github</a></p>
+<div class="wrap">
+
+  <header class="page-header">
+    <p class="eyebrow">about</p>
+    <h1>Sanjita Kumar</h1>
+  </header>
+
+  <div class="about-grid">
+    <div class="about-bio">
+      <p>Undergraduate at IIIT Hyderabad, BTech Computer Science with MS Computational Natural Sciences. I like building things, solving puzzles, and finding out how subjects connect — right now that means a lot of maths, quantum computing, and scientific computing.</p>
+      <p>Outside of that: chess, running, podcasts, and too much Numberphile. Member of ISAQC and the Chess Club.</p>
+    </div>
+    <img src="images/pfp.jpg" alt="Sanjita Kumar">
+  </div>
+
+  <hr class="divider">
+
+  <div class="meta-cols">
+    <div class="meta-list">
+      <h2>Interests</h2>
+      <ul>
+        <li>Mathematics</li>
+        <li>Quantum computing</li>
+        <li>Scientific computing</li>
+        <li>Chess</li>
+        <li>Podcasts</li>
+        <li>Running &amp; sports</li>
+      </ul>
+    </div>
+    <div class="meta-list">
+      <h2>Skills</h2>
+      <ul>
+        <li>C, C++</li>
+        <li>Python</li>
+        <li>NumPy, Matplotlib, Pandas</li>
+        <li>HTML, CSS, JS</li>
+        <li>Blender, DaVinci Resolve</li>
+        <li>Cakewalk / Waveform</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <section>
+    <p class="section-label">Timeline</p>
+    <ul id="timeline" class="timeline">
+
+      <li class="tl-item">
+        <button class="tl-btn" aria-expanded="false">
+          <span class="tl-arrow" aria-hidden="true">▶</span>
+          Early education
+        </button>
+        <div class="tl-body">
+          <div class="tl-inner">
+            <p>I am from Mumbai.Competed in MUN,school hackathons, and GSL (Global Social Leaders) — our team built a site around SDG goal 3 during the pandemic.</p>
+            <p>First explored web dev and Python in 7th grade via an entrepreneurship contest. Built a matching-cards game and a PHP login system in a week using tutorials and Stack Overflow.</p>
+            <p>Discovered competitive programming around 10th–11th grade. Solved CSES, ZCO, and ZIO problems — the pen-and-paper ZIO problems especially felt like puzzles. Gave IOQM in 12th and got a national certificate for top 10%. Also prepared for JEE Mains and Advanced, and wrote UGEE, IAT, and MHTCET.</p>
+          </div>
         </div>
-        </main>
-        <script src="script.js"></script>
-    </body>
+      </li>
+
+      <li class="tl-item">
+        <button class="tl-btn" aria-expanded="false">
+          <span class="tl-arrow" aria-hidden="true">▶</span>
+          Media &amp; creative tools
+        </button>
+        <div class="tl-body">
+          <div class="tl-inner">
+            <p>8th–9th grade: learnt Blender, DaVinci Resolve, and GIMP; made small animations and 3D art for school events. Also spent time in Cakewalk by Bandlab learning about music production and VST plugins.</p>
+            <p>Not proficient, but it introduced me to online learning communities and broadened my sense of what computers are for.</p>
+          </div>
+        </div>
+      </li>
+
+      <li class="tl-item">
+        <button class="tl-btn" aria-expanded="false">
+          <span class="tl-arrow" aria-hidden="true">▶</span>
+          Undergraduate (ongoing)
+        </button>
+        <div class="tl-body">
+          <div class="tl-inner">
+            <p>First year at IIIT Hyderabad: Build2Break and Megathon hackathons; ML workshop at IIT Bombay over winter break; NumPy/ Matplotlib/Pandas course.</p>
+            <p>Projects so far: Random Walk simulator, Unix shell, Twixt, this site, Chess Rating Tracker, and a multiplayer tic-tac-toe with facial recognition.</p>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <hr class="divider">
+
+  <section>
+    <p class="section-label">Contact</p>
+    <div class="contact-row">
+      <a href="https://www.linkedin.com/in/sanjitakumar/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://github.com/sanjitakr" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </section>
+
+</div>
+
+<script src="content.js"></script>
+<script src="script.js"></script>
+</body>
 </html>

@@ -1,28 +1,38 @@
 <!DOCTYPE html>
-
-
 <html lang="en">
-    <head>
-        <title>Sanjita Kumar</title>
-        <meta charset="utf-8" >
-        <meta  name="viewport"  content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <header>
-            <p style="text-align:center;">Sanjita Kumar </p>
-            <nav class="nav_horizontal_bar">
-                <a href="index.html" class="nav_item_active"> Home</a>
-                <a href="about.html" class="nav_item">About</a>
-                <a href="projects.html" class="nav_item">Project</a> 
-                <button id="change_theme">Mode</button>
-            </nav>
-        </header>
-        <main class="home_section">
-            <h3 class="typing greeting">Hello! I am</h3>
-            <h3 class="typing introduction_hero">Sanjita Kumar</h3>
-            <h3 class="typing description_hero">Curious and passionate learner</h3>
-        </main>
-        <script src="script.js"></script>
-    </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanjita Kumar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <span class="nav-path">~/sanjita</span>
+  <div class="nav-tabs">
+    <a href="index.html"    class="nav-tab active">home</a>
+    <a href="about.html"    class="nav-tab">about</a>
+    <a href="projects.html" class="nav-tab">projects</a>
+    <a href="links.html"    class="nav-tab">links</a>
+    <button id="theme-btn" aria-label="Switch to light mode">
+      <span class="theme-icon" aria-hidden="true"></span>
+    </button>
+  </div>
+</nav>
+
+<main class="wrap home-main">
+  <div class="prompt-row">
+    <span class="sigil" aria-hidden="true">$</span>
+    <span class="hero-name">Sanjita Kumar</span><span class="cursor" aria-hidden="true"></span>
+  </div>
+  <div class="prompt-row">
+    <span class="sigil" aria-hidden="true" style="visibility:hidden">$</span>
+    <span class="hero-sub">CS + Computational Natural Sciences · IIIT Hyderabad</span>
+  </div>
+</main>
+
+<script src="content.js"></script>
+<script src="script.js"></script>
+</body>
 </html>

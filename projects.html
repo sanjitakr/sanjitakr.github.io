@@ -1,35 +1,48 @@
 <!DOCTYPE html>
-
-
 <html lang="en">
-    <head>
-        <title>Sanjita Kumar</title>
-        <link rel="stylesheet" href="styles.css">
-        <meta charset="utf-8">
-         <meta name="viewport"  content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <p style="text-align:center;">Sanjita Kumar</p>
-         <nav class="nav_horizontal_bar">
-                <a href="index.html" class="nav_item"> Home</a>
-                <a href="about.html" class="nav_item">About</a>
-                <a href="projects.html" class="nav_item_active">Project</a>
-                <button id="change_theme">Mode</button>
-        </nav>
-        <main>
-            <h1 style="padding-top:3vh;">PROJECT:</h1>
-            <div id="filter">
-                <button class="filter_button" data-tag="All" aria-pressed="true">All</button>
-                <button class="filter_button" data-tag="Python" aria-pressed="false">Python</button>
-                <button class="filter_button" data-tag="C" aria-pressed="false">C</button>
-                <button class="filter_button" data-tag="Web-dev" aria-pressed="false">Web-development</button>
-                <button class="filter_button" data-tag="Scientific" aria-pressed="false">Scientific Computing</button>
-                <button class="filter_button" data-tag="Progress" aria-pressed="false">In Progress </button>
-                <button class="filter_button" data-tag="Complete" aria-pressed="false">Completed</button>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects · Sanjita Kumar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-            </div>
-            <div class="projects" id="project_container" aria-live="polite"></div>
-        </main>
-        <script src="script.js"></script>
-    </body>
+<nav>
+  <span class="nav-path">~/sanjita/projects</span>
+  <div class="nav-tabs">
+    <a href="index.html"    class="nav-tab">home</a>
+    <a href="about.html"    class="nav-tab">about</a>
+    <a href="projects.html" class="nav-tab active">projects</a>
+    <a href="links.html"    class="nav-tab">links</a>
+    <button id="theme-btn" aria-label="Switch to light mode">
+      <span class="theme-icon" aria-hidden="true"></span>
+    </button>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="page-header">
+    <p class="eyebrow">projects</p>
+    <h1>Things I've built</h1>
+  </header>
+
+  <div id="filter-bar" class="filter-bar" role="group" aria-label="Filter by tag">
+    <button class="filter-btn active" data-tag="All"        aria-pressed="true">All</button>
+    <button class="filter-btn"        data-tag="Python"     aria-pressed="false">Python</button>
+    <button class="filter-btn"        data-tag="C"          aria-pressed="false">C</button>
+    <button class="filter-btn"        data-tag="Web"        aria-pressed="false">Web</button>
+    <button class="filter-btn"        data-tag="Scientific" aria-pressed="false">Scientific</button>
+    <button class="filter-btn"        data-tag="In Progress" aria-pressed="false">In progress</button>
+    <button class="filter-btn"        data-tag="Complete"   aria-pressed="false">Complete</button>
+  </div>
+
+  <div id="project-grid" class="project-grid" aria-live="polite" aria-label="Projects"></div>
+
+</div>
+
+<script src="content.js"></script>
+<script src="script.js"></script>
+</body>
 </html>
