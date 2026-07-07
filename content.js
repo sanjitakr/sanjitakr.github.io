@@ -67,7 +67,7 @@ const SITE = {
     // {
     //   heading: "Content I e",
     //   items: [
-    //     { title: "3Blue1Brown",      url: "https://www.3blue1brown.com",         type: "video",    note: "Visual intuition for linear algebra, calculus, and more." }
+    //     { title: "name",      url: "url", type: "video",    note: "Visual intuition for linear algebra, calculus, and more." }
     //   ],
     // },
     {
